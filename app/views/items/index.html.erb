@@ -1,4 +1,10 @@
-<div class="wrapper">
-  <%= render "side_bar" %>
-  <%= render "main_item" %>
+<div class="contents row">
+  <% @items.each do |item| %>
+    <div class="content_post" style="background-image: url(<%= tweet.image %>);">
+      <p><%= item.text %></p>
+      <span class="name">
+        <%= item.name %>
+      </span>
+    </div>
+  <% end %>
 </div>
