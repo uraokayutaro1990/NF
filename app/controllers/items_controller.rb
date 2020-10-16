@@ -4,7 +4,7 @@ class ItemsController < ApplicationController
   end
 
   def new
-    @items = Item.new
+    @item = Item.new
   end
 
   def create
@@ -14,6 +14,10 @@ class ItemsController < ApplicationController
   def destroy
     item = Item.find(params[:id])
     item.destroy
+  end
+
+  def edit
+    @item = Item.find(params[:id])
   end
 
   private
