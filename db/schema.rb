@@ -10,10 +10,9 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_10_18_131617) do
+ActiveRecord::Schema.define(version: 2020_10_19_131902) do
 
   create_table "items", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC", force: :cascade do |t|
-    t.string "name"
     t.string "text"
     t.text "image"
     t.integer "category_id"
