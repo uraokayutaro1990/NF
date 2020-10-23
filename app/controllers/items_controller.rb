@@ -1,9 +1,9 @@
 class ItemsController < ApplicationController
   before_action :set_item, only: [:edit, :show]
   before_action :move_to_index, except: [:index, :show]
-
+ 
   def index
-    @items = Item.includes(:user)
+    @items = Item.includes(:user).sample(10)
   end
 
   def new
@@ -36,6 +36,7 @@ class ItemsController < ApplicationController
 
   private
   def item_params
+    params.require(:item).permit(:image, :text).merge(user_id: current_user.id)
   end
 
   def move_to_index
@@ -43,7 +44,6 @@ class ItemsController < ApplicationController
       redirect_to action: :index
     end
   end
-
 end
 
 
