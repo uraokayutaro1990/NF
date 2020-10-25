@@ -1,7 +1,7 @@
-
 <div class="contents row">
   <% @items.each do |item| %>
-    <%= render partial: "item", locals: { item: item } %>
+    <%= render partial: "item", locals: { item: item} %>
+    <%# 部分テンプレートを呼び出す、部分テンプレート名を指定、部分テンプレート内でその変数を使えるようになる %>
   <% end %>
 </div>
 
