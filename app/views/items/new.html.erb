@@ -1,0 +1,27 @@
+<div class="contents row">
+  <div class="container">
+    <h3>投稿する</h3>
+<<<<<<< Updated upstream
+    <%= render partial: "form", locals: { item: @item }%>
+=======
+    <%= form_with(model: @item, local: true) do |form| %>
+      <%= form.file_field :image %>
+ 　　　<%= form.text_area  :text, placeholder: "text", rows: "10" %>
+      <%= form.text_field :category_id, placeholder: "cotegory" 
+      <%# このコードに変更するとエラーが発生 %>
+      <%# 下記の前のコード<%= f.collection_select(:category_id, Category.all,{class:"select-box"}) %> 
+      <%#  <%= f.collection_select(:category_id, Category.all :id, :name, {}, {class:"category-select"}) %> 
+      <%= form.text_field :item_id, placeholder: "nostalgia"  %>
+      <%= form.submit "SEND" %>
+    <% end %>
+>>>>>>> Stashed changes
+  </div>
+</div>
+
+
+
+<<<<<<< Updated upstream
+=======
+
+
+>>>>>>> Stashed changes
