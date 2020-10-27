@@ -7,3 +7,4 @@ class Item < ApplicationRecord
   validates  :text, :category_id, presence: true
   end
 end
+#仮変更
