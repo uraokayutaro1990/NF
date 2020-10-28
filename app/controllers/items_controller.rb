@@ -4,6 +4,7 @@ class ItemsController < ApplicationController
  
   def index
     @items = Item.includes(:user).sample(10)
+    #ランダムで表示
   end
 
   def new
